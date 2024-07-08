@@ -1,0 +1,55 @@
+[project]
+name = "molcrafts-moldb"
+
+version = "0.0.1"
+
+authors = [
+    { name = "Roy Kid", email = "lijichen365@gmail.com" }
+]
+
+description = "A multi-backend database for molecule storage"
+
+readme = "README.md"
+
+requires-python = ">=3.11"
+
+classifiers = [
+    "License :: OSI Approved :: BSD License",
+    "Development Status :: 1 - Planning",
+    'Intended Audience :: Science/Research',
+    'Intended Audience :: Developers',
+    'Programming Language :: C',
+    'Programming Language :: Python',
+    'Programming Language :: Python :: 3',
+    'Programming Language :: Python :: 3.11',
+    'Programming Language :: Python :: 3.12',
+    'Programming Language :: Python :: 3 :: Only',
+    'Programming Language :: Python :: Implementation :: CPython',
+    'Topic :: Software Development',
+    'Topic :: Scientific/Engineering',
+    'Typing :: Typed',
+    'Operating System :: Microsoft :: Windows',
+    'Operating System :: POSIX',
+    'Operating System :: Unix',
+    'Operating System :: MacOS',
+]
+
+license = {file = "LICENSE"}
+
+dependencies = [
+    "h5py",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "ase"]
+test = ["pytest", "coverage"]
+
+[project.urls]
+Homepage = "https://github.com/MolCrafts/moldb"
+Issues = "https://github.com/MolCrafts/moldb/issues"
+
+[build-system]
+requires = [
+    "setuptools",
+]
+build-backend = "setuptools.build_meta"
