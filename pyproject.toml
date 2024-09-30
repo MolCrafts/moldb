@@ -37,12 +37,11 @@ classifiers = [
 license = {file = "LICENSE"}
 
 dependencies = [
-    "h5py",
+    "pony"
 ]
 
 [project.optional-dependencies]
-dev = ["pytest", "ase"]
-test = ["pytest", "coverage"]
+dev = ["pytest"]
 
 [project.urls]
 Homepage = "https://github.com/MolCrafts/moldb"
