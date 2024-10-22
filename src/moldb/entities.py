@@ -30,10 +30,10 @@ def get_ase_entity(name, entity, extra):
         'ctime': Required(float),
         'mtime': Required(float),
         'user': Required(str),
-        'numbers': Required(bytes),
-        'pbc': Required(bytes),
-        'cell': Required(bytes),
-        'positions': Required(bytes),
+        'numbers': Required(IntArray),
+        'pbc': Required(StrArray),
+        'cell': Required(FloatArray),
+        'positions': Required(FloatArray),
     }
     ase_attrs.update(extra)
 
@@ -50,7 +50,7 @@ def get_namespace_entity(name, entity):
         'category': Optional(str),
     }
 
-    return type(f"{name}NameSpace", (entity,), attrs)
+    return type(f"{name}", (entity,), attrs)
 
 def create_entity(name:str, defination:dict, base_entity):
 
